@@ -1,0 +1,105 @@
+
+/* Acerca de ... */
+
+.acerca-de {
+    height: 400px;
+    padding: 10px;
+    background-color: #f5f6f7;
+    min-height: 250px;
+    text-align: center;
+  }
+  
+.acerca-de .contenedor {
+    max-width: 400px;
+    text-align: center;
+  }
+
+.acerca-de-principal {
+    padding: 3rem;
+
+}
+
+.acerca-de-principal h2 {
+    font-size: 1.5rem;
+    color: #615151;
+
+}
+
+/* Etiqueta Foto de Perfil */
+
+@media (min-width: 576px){
+    #fotodeperfil{
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 575px){
+    #fotodeperfil{
+        width: 30%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 33%;
+        top: 630px;
+    }
+}
+/* Etiqueta Nombre */
+
+#nombre{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-family: 'DM Serif Text', serif;
+}
+
+/* Fin Acerca de ... */
+/* Estilos Generales */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h3 {
+    font-size: 0.5rem;
+    font-family: 'DM Serif Text', serif;
+
+}
+
+h4 {
+    font-size: 0.9rem;
+    font-family: 'DM Serif Text', serif;
+
+}
+  .seccion-oscura {
+    color: white;
+    background-color: #1b1b32;
+  }
+  
+  .seccion-clara {
+    color: black;
+    background-color: white;
+  }
+  
+  .seccion-titulo {
+    font-size: 2rem;
+    padding: 15px 0;
+    font-family: 'DM Serif Text', serif;
+  }
+  
+  .seccion-descripcion {
+    font-size: 1.2rem;
+    color: #584e4e;
+  }
+  
+  .seccion-texto {
+    font-size: 1.2rem;
+    margin: 10px 10px;
+  }
+
+/* Fin Estilos Generales */

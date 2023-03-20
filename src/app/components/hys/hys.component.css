@@ -3,7 +3,13 @@ h1 {
     font-family: 'DM Serif Text', serif;
 
   }
-
+  .hard_soft {
+    position: relative;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px #000000;
+  }
+  
 .hys i {
     font-size: 2rem;
     color: #9030de;

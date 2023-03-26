@@ -1,3 +1,57 @@
+/* Estilos Generales */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: 'DM Serif Text', serif;
+
+}
+
+h3 {
+  font-size: 1rem;
+  font-family: 'DM Serif Text', serif;
+
+}
+
+h4 {
+  font-size: 0.9rem;
+  font-family: 'DM Serif Text', serif;
+
+}
+.seccion-oscura {
+  color: white;
+  background-color: #1b1b32;
+}
+
+.seccion-clara {
+  color: black;
+  background-color: white;
+}
+
+.seccion-titulo {
+  font-size: 2rem;
+  padding: 15px 0;
+  font-family: 'DM Serif Text', serif;
+}
+
+.seccion-descripcion {
+  font-size: 1.2rem;
+  color: #584e4e;
+}
+
+.seccion-texto {
+  font-size: 1.2rem;
+  margin: 10px 10px;
+}
+
+/* Fin Estilos Generales */
+
+
 /* Experiencia */
 
 .experiencia {

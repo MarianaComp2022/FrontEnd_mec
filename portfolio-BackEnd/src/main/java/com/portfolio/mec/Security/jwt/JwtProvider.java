@@ -16,30 +16,33 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class JwtProvider {
-        private final static Logger logger = LoggerFactory.getLogger(JwtProvider.class);
 
-        @Value("${jwt.secret}")
-        private String secret;
-        @Value("${jwt.expiration}")
-        private int expiration;
-        
-        public String generateToken(Authentication authentication){
-            UsuarioPrincipal usuarioPrincipal = (UsuarioPrincipal) authentication.getPrincipal();
-            return Jwts.builder().setSubject(usuarioPrincipal.getUsername())
-                   .setIssuedAt(new Date())
-                   .setExpiration(new Date(new Date().getTime()+expiration*1000))
-                   .signWith(SignatureAlgorithm.HS512, secret)
-                   .compact();
-        }
-        public String getNombreUsuarioFromToken(String token) {
+    private final static Logger logger = LoggerFactory.getLogger(JwtProvider.class);
+
+    @Value("${jwt.secret}")
+    private String secret;
+    @Value("${jwt.expiration}")
+    private int expiration;
+
+    public String generateToken(Authentication authentication) {
+        UsuarioPrincipal usuarioPrincipal = (UsuarioPrincipal) authentication.getPrincipal();
+        return Jwts.builder().setSubject(usuarioPrincipal.getUsername())
+                .setIssuedAt(new Date())
+                .setExpiration(new Date(new Date().getTime() + expiration * 1000))
+                .signWith(SignatureAlgorithm.HS512, secret)
+                .compact();
+    }
+
+    public String getNombreUsuarioFromToken(String token) {
         return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody().getSubject();
-        }
-        
-        public boolean validateToken(String token){
+    }
+   
+    public boolean validateToken(String token){
         try{
             Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
             return true;
-        } catch (MalformedJwtException e) {
+        } 
+        catch (MalformedJwtException e) {
             logger.error("Token mal formado");
         }
         catch (UnsupportedJwtException e) {
@@ -56,4 +59,6 @@ public class JwtProvider {
         }
         return false;
      }    
+    
+    
 }

@@ -1,4 +1,3 @@
-
 package com.portfolio.mec.Security;
 
 import com.portfolio.mec.Security.Service.UserDetailsImpl;
@@ -16,26 +15,26 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class MainSecurity extends WebSecurityConfigurerAdapter{
+public class MainSecurity extends WebSecurityConfigurerAdapter {
 
-   @Autowired
-   UserDetailsImpl usuerDetailsServicesImpl;
-   @Autowired
-   JwtEntryPoint jwtEntryPoint;
-   
-   @Bean
-   public JwtTokenFilter jwtTokenFilter(){
-       return new JwtTokenFilter();
-   }
-   @Bean
-   public PasswordEncoder passwordEncoder(){
-       return new BCryptPasswordEncoder();
-   }
+    @Autowired
+    UserDetailsImpl usuerDetailsServicesImpl;
+    @Autowired
+    JwtEntryPoint jwtEntryPoint;
+
+    @Bean
+    public JwtTokenFilter jwtTokenFilter() {
+        return new JwtTokenFilter();
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -47,24 +46,23 @@ public class MainSecurity extends WebSecurityConfigurerAdapter{
                 .exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 
     @Override
     protected AuthenticationManager authenticationManager() throws Exception {
-        return super.authenticationManager(); 
+        return super.authenticationManager();
     }
+
     @Bean
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManager();
+        return super.authenticationManagerBean();
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(usuerDetailsServicesImpl).passwordEncoder(passwordEncoder());       
+        auth.userDetailsService(usuerDetailsServicesImpl).passwordEncoder(passwordEncoder());
+
     }
-   
-   
-   
+
 }

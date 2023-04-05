@@ -1,8 +1,12 @@
-package com.portfolio.mec.Service;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.portfolio.mecomp.Service;
 
-import com.portfolio.mec.Entity.Persona;
-import com.portfolio.mec.Interface.IPersonaService;
-import com.portfolio.mec.Repository.IPersonaRepository;
+import com.portfolio.mecomp.Entity.Persona;
+import com.portfolio.mecomp.Interface.IPersonaService;
+import com.portfolio.mecomp.Repository.IPersonaRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,7 +14,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ImpPersonaService implements IPersonaService {
     @Autowired IPersonaRepository ipersonaRepository;
-
+    
     @Override
     public List<Persona> getPersona() {
         List<Persona> persona = ipersonaRepository.findAll();
@@ -24,7 +28,7 @@ public class ImpPersonaService implements IPersonaService {
 
     @Override
     public void deletePersona(Long id) {
-        ipersonaRepository.existsById(id);
+        ipersonaRepository.deleteById(id);
     }
 
     @Override

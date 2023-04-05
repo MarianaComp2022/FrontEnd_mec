@@ -1,13 +1,13 @@
-package com.portfolio.mec;
+package com.portfolio.mecomp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MecApplication {
+public class MecompApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MecApplication.class, args);
+		SpringApplication.run(MecompApplication.class, args);
 	}
 
 }

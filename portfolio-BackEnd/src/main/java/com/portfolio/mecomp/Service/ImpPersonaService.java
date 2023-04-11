@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.portfolio.mecomp.Service;
 
 import com.portfolio.mecomp.Entity.Persona;
@@ -13,7 +9,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ImpPersonaService implements IPersonaService {
-    @Autowired IPersonaRepository ipersonaRepository;
+    @Autowired 
+    IPersonaRepository ipersonaRepository;
     
     @Override
     public List<Persona> getPersona() {

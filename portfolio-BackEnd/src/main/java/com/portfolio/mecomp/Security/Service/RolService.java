@@ -4,7 +4,7 @@ import com.portfolio.mecomp.Security.Entity.Rol;
 import com.portfolio.mecomp.Security.Enums.RolNombre;
 import com.portfolio.mecomp.Security.Repository.iRolRepository;
 import java.util.Optional;
-import jakarta.transaction.Transactional;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

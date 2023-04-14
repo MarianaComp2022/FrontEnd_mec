@@ -11,7 +11,7 @@ import com.portfolio.mecomp.Security.Service.UsuarioService;
 import com.portfolio.mecomp.Security.jwt.JwtProvider;
 import java.util.HashSet;
 import java.util.Set;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

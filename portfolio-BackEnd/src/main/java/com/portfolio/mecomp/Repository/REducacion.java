@@ -1,4 +1,3 @@
-
 package com.portfolio.mecomp.Repository;
 
 import com.portfolio.mecomp.Entity.Educacion;

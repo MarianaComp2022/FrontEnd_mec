@@ -1,20 +1,23 @@
-<!--
-<section class="hys seccion-clara">
-  <div class="container text-center">
-    <div class="row">
-        <h1>Hard & Soft Skills</h1>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-          <div class="hard_soft text-center">
-            <h3>PHP</h3>
+<section class="seccion-clara">
+  <div>
+    <div class="row text-center">
+      <h1>Hard & Soft Skills</h1>
+        <div class="col-lg-2 text-center">
+          <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
+        </div>
+  
+        <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
+          <div class="hard_soft text-center d-flex flex-column">
+            <h1><p id="nombre">{{skill.nombre}} {{skill.porcentaje}}</p></h1>
             <circle-progress
-                [percent]="85"
+                [percent]="(skill.porcentaje)"
                 [radius]="70"
                 [showUnits]="false"
-                [title]="'PHP'"
+                [title]="(skill.nombre)"
                 [titleColor]="'black'"
                 [titleFontSize]="'3em'"
                 [showSubtitle]="false" 
-                [title]="'PHP'"
+                [title]="(skill.nombre)"
                 [outerStrokeWidth]="15"
                 [innerStrokeWidth]="2"
                 [outerStrokeColor]="'#9030de'"
@@ -23,104 +26,21 @@
                 [animationDuration]="600"
                 [lazy]="true"
             ></circle-progress>
+            <div class="col-12 col-md-6 col-lg-4">
+              <tbody text-center d-flex flex-column>
+                <td *ngIf="isLogged">
+                  <button class="btn btn-success" routerLink="/editskill/{{skill.id}}">
+                      <i class="bi bi-pencil-fill"></i></button>
+                </td>
+               
+                <td *ngIf="isLogged">
+                  <button class="btn btn-danger" (click)="delete(skill.id)">
+                      <i class="bi bi-trash-fill"></i></button>
+                </td>
+              </tbody>
+            </div>
           </div>
         </div>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-          <circle-progress
-              [percent]="85"
-              [radius]="100"
-              [showUnits]="false"
-              [title]="'PHP'"
-              [titleColor]="'black'"
-              [titleFontSize]="'3em'"
-              [showSubtitle]="false" 
-              [title]="'PHP'"
-              [outerStrokeWidth]="15"
-              [innerStrokeWidth]="2"
-              [outerStrokeColor]="'#9030de'"
-              [innerStrokeColor]="'#9030de'"
-              [animation]="true"
-              [animationDuration]="600"
-              [lazy]="true"
-          ></circle-progress>
-        </div>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="85"
-            [radius]="100"
-            [showUnits]="false"
-            [title]="'PHP'"
-            [titleColor]="'black'"
-            [titleFontSize]="'3em'"
-            [showSubtitle]="false" 
-            [title]="'PHP'"
-            [outerStrokeWidth]="15"
-            [innerStrokeWidth]="2"
-            [outerStrokeColor]="'#9030de'"
-            [innerStrokeColor]="'#9030de'"
-            [animation]="true"
-            [animationDuration]="600"
-            [lazy]="true"
-        ></circle-progress>
-        </div>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-      <circle-progress
-          [percent]="85"
-          [radius]="100"
-          [showUnits]="false"
-          [title]="'PHP'"
-          [titleColor]="'black'"
-          [titleFontSize]="'3em'"
-          [showSubtitle]="false" 
-          [title]="'PHP'"
-          [outerStrokeWidth]="15"
-          [innerStrokeWidth]="2"
-          [outerStrokeColor]="'#9030de'"
-          [innerStrokeColor]="'#9030de'"
-          [animation]="true"
-          [animationDuration]="600"
-          [lazy]="true"
-      ></circle-progress>
-        </div>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-          <circle-progress
-              [percent]="85"
-              [radius]="100"
-              [showUnits]="false"
-              [title]="'PHP'"
-              [titleColor]="'black'"
-              [titleFontSize]="'3em'"
-              [showSubtitle]="false" 
-              [title]="'PHP'"
-              [outerStrokeWidth]="15"
-              [innerStrokeWidth]="2"
-              [outerStrokeColor]="'#9030de'"
-              [innerStrokeColor]="'#9030de'"
-              [animation]="true"
-              [animationDuration]="600"
-              [lazy]="true"
-          ></circle-progress>
-        </div>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-          <circle-progress
-              [percent]="85"
-              [radius]="100"
-              [showUnits]="false"
-              [title]="'PHP'"
-              [titleColor]="'black'"
-              [titleFontSize]="'3em'"
-              [showSubtitle]="false" 
-              [title]="'PHP'"
-              [outerStrokeWidth]="15"
-              [innerStrokeWidth]="2"
-              [outerStrokeColor]="'#9030de'"
-              [innerStrokeColor]="'#9030de'"
-              [animation]="true"
-              [animationDuration]="600"
-              [lazy]="true"
-          ></circle-progress>
-        </div>
-
     </div>
   </div>
-</section> -->
+</section>

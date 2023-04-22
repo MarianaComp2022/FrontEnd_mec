@@ -1,19 +1,26 @@
- <!-- Acerca de ... -->
- <section id="acerca-de" class="acerca-de seccion-oscura">
-   <div class="container text-center">
-     <div class="row">
+<!-- Acerca de ... -->
+<!--<section id="acerca-de" class="acerca-de seccion-oscura">-->
+  <div class="row text-center"  id="acerca-de" class="acerca-de seccion-oscura">
+    <h2 class="seccion-titulo">Acerca de ...</h2>
+    <div class="col-lg-2 text-center">
+      <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged">
+        Editar Persona
+      </button>
+    </div>
+    <div class="container text-center">
+      <div class="row">
         <div class="col-sm-3">
-            <img class="" src="../../../assets/mery.jpg" id="fotodeperfil" alt="Foto de Mariana Compagnoni">
-            <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
-            <p class="seccion-texto">Full Stack Developer Jr.</p>
+          <img class="" src={{persona.img}} id="fotodeperfil" alt="Foto de Mariana Compagnoni">
+          <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
+          <p class="seccion-texto">Full Stack Developer Jr.</p>
         </div>
         <div class="col-sm-9">
           <span>
             <h2 class="seccion-titulo">Acerca de Mariana</h2>
-            <p class="seccion-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet, odio eget fringilla scelerisque, sem purus fringilla mauris, nec ultricies nisl nisl sit amet dolor. Donec et venenatis nunc, vel hendrerit ex. Vestibulum sapien ipsum, rutrum eget est et, ultricies sagittis urna. In non volutpat est.</p> 
+            <p class="seccion-texto">{{persona.descripcion}}</p>
           </span>
         </div>
       </div>
-    </div> 
-</section>
+    </div>
+<!--</section>-->
 <!-- Fin Acerca de ... -->

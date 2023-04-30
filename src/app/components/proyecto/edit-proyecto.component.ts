@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyecto';
 import { ImageService } from 'src/app/service/image.service';
@@ -9,7 +9,7 @@ import { ProyectoService } from 'src/app/service/proyecto.service';
   templateUrl: './edit-proyecto.component.html',
   styleUrls: ['./edit-proyecto.component.css']
 })
-export class EditProyectoComponent {
+export class EditProyectoComponent implements OnInit {
   proyecto: Proyecto = null;
 
   constructor(private activatedRouter: ActivatedRoute,

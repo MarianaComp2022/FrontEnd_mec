@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Proyecto } from 'src/app/model/proyecto';
+import { Proyecto } from 'src/app/model/proyecto.model';
 import { ProyectoService } from 'src/app/service/proyecto.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ImageService } from 'src/app/service/image.service';

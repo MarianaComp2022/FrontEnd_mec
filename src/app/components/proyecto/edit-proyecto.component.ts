@@ -25,7 +25,7 @@ export class EditProyectoComponent {
       data => {
         this.proyecto = data;
       }, err => {
-        alert("Error al Modificar la  Persona");
+        alert("Error al Modificar el Proyecto");
         this.router.navigate(['']);
       }
     )
@@ -38,7 +38,7 @@ export class EditProyectoComponent {
       data => {
         this.router.navigate(['']);
       }, err => {
-        alert("Error al modificar la Persona");
+        alert("Error al modificar el Proyecto");
         this.router.navigate(['']);
       }
     )

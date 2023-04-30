@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Proyecto } from 'src/app/model/proyecto.model';
+import { Proyecto } from 'src/app/model/proyecto';
 import { ImageService } from 'src/app/service/image.service';
 import { ProyectoService } from 'src/app/service/proyecto.service';
 

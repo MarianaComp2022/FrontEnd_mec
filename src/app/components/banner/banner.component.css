@@ -9,7 +9,7 @@ section {
 .banner {
     height: 100px;
     background-color: #f5f6f7;
-    min-height: 150px;
+    min-height: 50px;
     text-align: center;
   }
   
@@ -19,8 +19,8 @@ section {
   }
 
 .banner-imagen {
-    width: 200px;
-    height: 200px;
-    margin: 20px;
+    width: 100px;
+    height: 100px;
+    margin: 0px;
 
 }

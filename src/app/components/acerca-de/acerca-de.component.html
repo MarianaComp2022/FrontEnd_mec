@@ -1,8 +1,6 @@
 <!-- Acerca de  ... -->
 <div class="container-fluid acerca-de seccion-oscura">
-      
       <div class="row">
-        <h2 class="seccion-titulo">Acerca de ...</h2>
         <div class="text-center">
           <button type="button" class="btn btn-dark" routerLink="/editacercade/{{persona.id}}" *ngIf="isLogged">
             Editar Persona
@@ -17,46 +15,11 @@
               <p class="seccion-texto">Full Stack Developer Jr.</p>
         </div>
         <div class="col-sm-7 col-lg-9">
-              <h2 class="seccion-titulo">mi</h2>
+              <h2 class="seccion-titulo">Acerca de ...</h2>
               <p class="seccion-descripcion">{{persona.descripcion}}</p>
         </div>
       </div>
 
 </div>
 
-    <!-- Fin Acerca de ... -->
-
-
-
-
-
-    <!-- <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"> -->
-
-    <!-- Acerca de  ... 
-<section id="acerca-de" class="acerca-de seccion-oscura">
-  <div class="row text-center"  id="acerca-de" class="acerca-de seccion-oscura">
-    <h2 class="seccion-titulo">Acerca de ...</h2>
-    <div class="col-lg-2 text-center">
-      <td *ngIf="isLogged">
-        <button class="btn btn-primary" routerLink="/editacercade/{{persona.id}}" *ngIf="isLogged">
-          Editar Persona
-        </button>
-      </td>
-    </div>
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-sm-3">
-          <img class="" src={{persona.img}} id="fotodeperfil" alt="Foto de Mariana Compagnoni">
-          <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
-          <p class="seccion-texto">Full Stack Developer Jr.</p>
-        </div>
-        <div class="col-sm-9">
-          <span>
-            <h2 class="seccion-titulo">Acerca de Mariana</h2>
-            <p class="seccion-texto">{{persona.descripcion}}</p>
-          </span>
-        </div>
-      </div>
-    </div>
-</section>-->
     <!-- Fin Acerca de ... -->

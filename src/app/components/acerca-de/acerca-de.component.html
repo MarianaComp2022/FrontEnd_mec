@@ -1,36 +1,38 @@
-<div class="row text-center">
-  <h2>Acerca de ...</h2>
-  <div class="col-lg-2 text-center">
-      <button type="button" class="btn btn-dark" routerLink="/editacercade/{{persona.id}}" *ngIf="isLogged">
-          Editar Persona
-      </button>
-  </div>
-
-  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-      <img src={{persona.img}} class="img-fluid" id="fotodeperfil">
-  </div>
-  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-      <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
-      <p>Full Stack Developer Jr.</p>
-  </div>
-  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-      <span>
-        <h2>Acerca de ...</h2>
-        <p>{{persona.descripcion}}</p>
-      </span>
-          
+<!-- Acerca de  ... -->
+<div class="container-fluid acerca-de seccion-oscura">
       
-  </div>
+      <div class="row">
+        <h2 class="seccion-titulo">Acerca de ...</h2>
+        <div class="text-center">
+          <button type="button" class="btn btn-dark" routerLink="/editacercade/{{persona.id}}" *ngIf="isLogged">
+            Editar Persona
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5 col-lg-3">
+              <img src={{persona.img}} class="img-fluid" id="fotodeperfil">
+              <p id="nombre">{{persona.nombre}}</p>
+              <p id="apellido">{{persona.apellido}}</p>
+              <p class="seccion-texto">Full Stack Developer Jr.</p>
+        </div>
+        <div class="col-sm-7 col-lg-9">
+              <h2 class="seccion-titulo">mi</h2>
+              <p class="seccion-descripcion">{{persona.descripcion}}</p>
+        </div>
+      </div>
+
 </div>
 
+    <!-- Fin Acerca de ... -->
 
 
 
 
 
+    <!-- <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"> -->
 
-
-<!-- Acerca de  ... 
+    <!-- Acerca de  ... 
 <section id="acerca-de" class="acerca-de seccion-oscura">
   <div class="row text-center"  id="acerca-de" class="acerca-de seccion-oscura">
     <h2 class="seccion-titulo">Acerca de ...</h2>
@@ -57,4 +59,4 @@
       </div>
     </div>
 </section>-->
-<!-- Fin Acerca de ... -->
+    <!-- Fin Acerca de ... -->

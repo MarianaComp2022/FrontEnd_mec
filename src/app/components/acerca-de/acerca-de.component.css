@@ -1,8 +1,21 @@
 
 /* Acerca de ... */
 
+.columna {
+  background-color: red;
+  color: white;
+  font-size: 50px;
+  border: 2px solid #006e52;
+}
+
+
+.conteiner{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .acerca-de {
-    /*height: 400px;*/
     padding: 10px;
     background-color: #f5f6f7;
     min-height: 250px;
@@ -51,9 +64,16 @@
 #nombre{
     font-weight: bold;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 2px;
     font-size: 1.5rem;
     font-family: 'DM Serif Text', serif;
+}
+#apellido{
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 2rem;
+  font-family: 'DM Serif Text', serif;
 }
 
 /* Fin Acerca de ... */
@@ -94,7 +114,7 @@ h4 {
   
   .seccion-descripcion {
     font-size: 1.2rem;
-    color: #584e4e;
+    color: white;
   }
   
   .seccion-texto {

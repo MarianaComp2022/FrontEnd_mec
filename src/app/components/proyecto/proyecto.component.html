@@ -1,46 +1,53 @@
 <div class="row text-center">
   <h1>Galeria de Proyectos</h1>
   <div class="col-lg-2 text-center">
-      <button type="button" class="btn btn-dark" routerLink="/nuevo_proy" *ngIf="isLogged">
-          Nuevo Proyecto
-      </button>
+    <button type="button" class="btn btn-dark" routerLink="/nuevo_proy" *ngIf="isLogged">
+      Nuevo Proyecto
+    </button>
   </div>
-
-  <div class="col lg 1"></div>
-  <div class="col-lg-11">
-      <table class="table">
-          <tbody>
+  <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
+    <div class="container text-center proyectos-contenedor">
+      <div class="row">
+        <h3>Detalle de la forma en la que estuve involucrada y acceso web</h3>
+        <div class="col">
+          <table class="table">
+            <tbody>
               <tr *ngFor="let Proyecto of proy">
-                  <td>
-                      <h2><img src={{Proyecto.img}} class="img-fluid" id="foto_proy"></h2>
-                  </td>
-                  <td>
-                      <h2>{{Proyecto.nombre}}</h2>
-                  </td>
-                  <td>{{Proyecto.descripcion}}</td>
-                  <td *ngIf="isLogged">
-                      <button class="btn btn-success" routerLink="/edit_proy/{{Proyecto.id}}">
-                          <i class="bi bi-pencil-fill"></i></button>
-                  </td>
-                  <td *ngIf="isLogged">
-                      <button class="btn btn-danger" (click)="borrar(Proyecto.id)">
-                          <i class="bi bi-trash-fill"></i></button>
-                  </td>
+                <div class="proyecto">
+                  <h2><img src={{Proyecto.img}} class="img-fluid" id="foto_proy"></h2>
+                  <!-- <img src="../../../assets/proyecto1.png" alt="Proyecto 1"> -->
+                  <div class="overlay">
+                    <div class="iconos-contenedor">
+                      <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-list-check"></i>
+                      </a>
+                      <a href="https://www.freecodecamp.org/espanol/" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-laptop"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+                <td *ngIf="isLogged">
+                  <button class="btn btn-success" routerLink="/edit_proy/{{Proyecto.id}}">
+                    <i class="bi bi-pencil-fill"></i></button>
+                </td>
+                <td *ngIf="isLogged">
+                  <button class="btn btn-danger" (click)="borrar(Proyecto.id)">
+                    <i class="bi bi-trash-fill"></i></button>
+                </td>
+                <td>
+                  <h2>{{Proyecto.nombre}}</h2>
+                </td>
+                <!--  <p>Proyecto 1</p> -->
+                <td>{{Proyecto.descripcion}}</td>
               </tr>
-          </tbody>
-      </table>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 <!-- Proyectos 

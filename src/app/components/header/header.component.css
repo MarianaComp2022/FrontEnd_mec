@@ -2,7 +2,9 @@ div{
     background-color:  #cd93fd;
 }
 
-app-social{
-    float: right;
-    margin-top: 25px;
-}
+.redes_sociales{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  

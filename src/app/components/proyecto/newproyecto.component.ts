@@ -20,6 +20,8 @@ export class NewproyectoComponent implements OnInit {
     private router: Router,
     public imageService: ImageService) { }
   
+  
+  
   ngOnInit(): void {
   }
 

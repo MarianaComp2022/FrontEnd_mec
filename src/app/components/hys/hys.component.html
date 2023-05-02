@@ -3,6 +3,7 @@
     <div class="row text-center">
       <h1>Hard & Soft Skills</h1>
         <div class="col-lg-2 text-center">
+          <h3>competencias adquiridas a través del estudio o la experiencia | permiten a una persona relacionarse con soltura en su entorno</h3>
           <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
         </div>
   
@@ -12,11 +13,11 @@
             <h2><p id="nombre">{{skill.nombre}}</p></h2>
             <circle-progress
                 [percent]="(skill.porcentaje)"
-                [radius]="70"
+                [radius]="80"
                 [showUnits]="true"
                 [title]=""
                 [titleColor]="'black'"
-                [titleFontSize]="'3rem'"
+                
                 [outerStrokeWidth]="15"
                 [innerStrokeWidth]="2"
                 [outerStrokeColor]="'#9030de'"

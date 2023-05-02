@@ -16,6 +16,23 @@ h2 {
     font-family: 'DM Serif Text', serif;
   }
 
+  h3 {
+    font-size: 1rem;
+    font-family: 'DM Serif Text', serif;
+  
+  }
+
+.circle-progress {
+
+    font-size: 1rem;
+    color: #9030de;
+    background-color: #0a0a23;
+    padding: 2px 2px;
+    text-align: center;
+    align-items: center;
+
+}
+
 .hys-contenedor {
   padding-top: 60px;
   margin-bottom: 40px;

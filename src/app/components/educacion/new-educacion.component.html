@@ -1,19 +1,25 @@
-<div class="container">
-    <div class="row">
-        <div>
+<body class="bg-dark">
+  <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 mt-7 bg-light rounded">
+            <h1 class="text-center font-weight-bold text-primary">Educación</h1>
+            <hr class="bg-light">
+            <h5 class="text-center text-success"></h5>
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="nombreEdu">Nombre de la Institución Educativa</label>
+                    <label for="nombreEdu">Nombre de la Institución </label>
                     <input type="text" class="form-control" id="nombreEdu" name="nombreEdu" [(ngModel)]="nombreEdu" required>
                 </div>
                 <div class="form-group">
-                    <label for="descripcionEdu">Descripción de sus Estudios</label>
-                    <input type="text" class="form-control" id="descripcionEdu" name="descripcionEdu" [(ngModel)]="descripcionEdu" required>
+                    <label for="descripcionEdu">Descripción de los Estudios</label>
+                    <textarea name="descripcionEdu" id="descripcionEdu" class="form-control" cols="30" rows="4" [(ngModel)]="descripcionEdu" required></textarea>
                 </div>
+                <br>
                 <button class="btn btn-primary">
                     Agregar Educación
                 </button>
             </form>
         </div>
     </div>
-</div>
+  </div>
+</body>

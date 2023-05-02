@@ -8,16 +8,15 @@
   
         <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
           <div class="hard_soft text-center d-flex flex-column">
-            <h1><p id="nombre">{{skill.nombre}} {{skill.porcentaje}}</p></h1>
+            <h4><p id="tipo">{{skill.tipo}}</p></h4>
+            <h2><p id="nombre">{{skill.nombre}}</p></h2>
             <circle-progress
                 [percent]="(skill.porcentaje)"
                 [radius]="70"
-                [showUnits]="false"
-                [title]="(skill.nombre)"
+                [showUnits]="true"
+                [title]=""
                 [titleColor]="'black'"
-                [titleFontSize]="'3em'"
-                [showSubtitle]="false" 
-                [title]="(skill.nombre)"
+                [titleFontSize]="'3rem'"
                 [outerStrokeWidth]="15"
                 [innerStrokeWidth]="2"
                 [outerStrokeColor]="'#9030de'"
@@ -26,19 +25,18 @@
                 [animationDuration]="600"
                 [lazy]="true"
             ></circle-progress>
-            <div class="col-12 col-md-6 col-lg-4">
-              <tbody text-center d-flex flex-column>
-                <td *ngIf="isLogged">
-                  <button class="btn btn-success" routerLink="/editskill/{{skill.id}}">
-                      <i class="bi bi-pencil-fill"></i></button>
-                </td>
-               
-                <td *ngIf="isLogged">
-                  <button class="btn btn-danger" (click)="delete(skill.id)">
-                      <i class="bi bi-trash-fill"></i></button>
-                </td>
-              </tbody>
-            </div>
+             <div class="col-12 col-md-6 col-lg-4">
+                 <tbody text-center d-flex flex-column>
+                   <td *ngIf="isLogged">
+                     <button class="btn btn-success" routerLink="/editskill/{{skill.id}}">
+                         <i class="bi bi-pencil-fill"></i></button>
+                   </td>  
+                   <td *ngIf="isLogged">
+                     <button class="btn btn-danger" (click)="delete(skill.id)">
+                         <i class="bi bi-trash-fill"></i></button>
+                   </td>
+                 </tbody>
+             </div>
           </div>
         </div>
     </div>

@@ -5,32 +5,90 @@
           Agregar Educación
       </button>
   </div>
-
-  <div class="col lg 1"></div>
-  <div class="col-lg-11">
-      <table class="table">
-          <tbody>
-              <tr *ngFor="let Educacion of educacion">
-                  <td>
-                      <h2>{{Educacion.nombreEdu}}</h2>
-                  </td>
-                  <td>{{Educacion.descripcionEdu}}</td>
-                  <td *ngIf="isLogged">
+<section class="intro">
+  <div class="gradient-custom-1 h-100">
+    <div class="mask d-flex align-items-center h-100">
+      <div class="container">
+        <div class="row justify-content-center">
+          <!-- <div class="col-12"> -->
+            <div class="table-responsive bg-white">
+             <div class="col-lg-1"></div>
+              <div class="col-lg-11">
+                <table class="table mb-0" *ngIf="isLogged">
+                  <thead>
+                    <tr>
+                      <th scope="col-lg-3">TIPO - TITULO</th>
+                      <!-- <th scope="col">TITULO</th> -->
+                      <th scope="col-lg-7">COMPETENCIAS PROFESIONALES</th>
+                      <th scope="col-lg-1"></th>
+                      <th scope="col-lg-1"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let Educacion of educacion">
+                      <td scope="col-lg-3">{{Educacion.nombreEdu}}</td>
+                      <td scope="col-lg-7">{{Educacion.descripcionEdu}}</td>
+                      <td scope="col-lg-1" *ngIf="isLogged">
+                        <button class="btn btn-success" routerLink="/editedu/{{Educacion.id}}">
+                            <i class="bi bi-pencil-fill"></i></button>
+                      </td>
+                      <td scope="col-lg-1" *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="borrar(Educacion.id)">
+                            <i class="bi bi-trash-fill"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>  
+            </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 
+<section class="intro">
+  <div class="gradient-custom-1 h-100">
+    <div class="mask d-flex align-items-center h-100">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="table-responsive bg-white">
+              <table class="table mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">TIPO - TITULO</th>
+                    <th scope="col">TITULO</th> 
+                    <th scope="col">COMPETENCIAS PROFESIONALES</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let Educacion of educacion">
+                    <td>{{Educacion.nombreEdu}}</td>
+                    <td>{{Educacion.descripcionEdu}}</td>
+                    <td *ngIf="isLogged">
                       <button class="btn btn-success" routerLink="/editedu/{{Educacion.id}}">
                           <i class="bi bi-pencil-fill"></i></button>
-                  </td>
-                  <td *ngIf="isLogged">
+                    </td>
+                    <td *ngIf="isLogged">
                       <button class="btn btn-danger" (click)="borrar(Educacion.id)">
                           <i class="bi bi-trash-fill"></i></button>
-                  </td>
-              </tr>
-          </tbody>
-      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
-
-
+-->
 
 
 

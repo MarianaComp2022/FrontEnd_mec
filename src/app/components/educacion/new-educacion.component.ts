@@ -24,7 +24,7 @@ export class NewEducacionComponent implements OnInit {
         alert("Educación añadida correctamente");
         this.router.navigate(['']);
       }, err =>{
-        alert("falló");
+        alert("Se produjo un Falló o ya existe");
         this.router.navigate(['']);
       }
     )

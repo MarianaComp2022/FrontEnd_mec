@@ -1,4 +1,37 @@
+/* tabla */
+
+html,
+body,
+.intro {
+  height: 100%;
+}
+
+.gradient-custom-1 {
+  /* fallback for old browsers */
+  background: #cd9cf2;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to top, rgba(205, 156, 242, 1), rgba(246, 243, 255, 1));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to top, rgba(205, 156, 242, 1), rgba(246, 243, 255, 1))
+}
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  /*white-space: nowrap;*/
+  overflow: hidden;
+}
+tbody td {
+  font-weight: 2rem;
+  color: #999999;
+}
+/* tabla */
+
 /* educacion */
+
+
 
 .educacion {
     padding: 40px 40px 60px 40px;
@@ -39,6 +72,12 @@
     font-size: 2.5rem;
     font-family: 'DM Serif Text', serif;
 
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-family: 'DM Serif Text', serif;
+  
   }
   
   .educacion i {

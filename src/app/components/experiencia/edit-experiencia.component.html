@@ -7,12 +7,12 @@
             <h5 class="text-center text-success"></h5>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="nombreExp">Nombre de la empresa</label>
-                    <input type="text" class="form-control" id="nombreExp" name="nombreExp" [(ngModel)]="expLab.nombreExp" required>
+                    <label for="nombreExp">Nombre de la Empresa</label>
+                    <input placeholder="Empresa - Año" type="text" class="form-control" id="nombreExp" name="nombreExp" [(ngModel)]="expLab.nombreExp" required>
                 </div>
                 <div class="form-group">
-                    <label for="descripcionExp">Descripcion de la tarea</label>
-                    <textarea name="descripcionExp" id="descripcionExp" class="form-control" cols="30" rows="4" [(ngModel)]="expLab.descripcionExp" required></textarea>
+                    <label for="descripcionExp">Descripción</label>
+                    <textarea placeholder="de las tareas realizadas" name="descripcionExp" id="descripcionExp" class="form-control" cols="30" rows="4" [(ngModel)]="expLab.descripcionExp" required></textarea>
                 </div>
                 <br>
                 <button class="btn btn-primary">

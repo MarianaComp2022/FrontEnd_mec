@@ -78,6 +78,11 @@
 
 /* Fin Acerca de ... */
 /* Estilos Generales */
+.row{
+  padding: 20px;
+}
+
+
 section {
     display: flex;
     flex-direction: column;

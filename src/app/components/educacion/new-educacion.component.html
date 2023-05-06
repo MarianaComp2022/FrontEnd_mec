@@ -8,11 +8,11 @@
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="nombreEdu">Nombre de la Institución </label>
-                    <input type="text" class="form-control" id="nombreEdu" name="nombreEdu" [(ngModel)]="nombreEdu" required>
+                    <input placeholder="Nombre - Año Finalización" type="text" class="form-control" id="nombreEdu" name="nombreEdu" [(ngModel)]="nombreEdu" required>
                 </div>
                 <div class="form-group">
                     <label for="descripcionEdu">Descripción de los Estudios</label>
-                    <textarea name="descripcionEdu" id="descripcionEdu" class="form-control" cols="30" rows="4" [(ngModel)]="descripcionEdu" required></textarea>
+                    <textarea placeholder="Titulo Obtenido - Aclaraciones" name="descripcionEdu" id="descripcionEdu" class="form-control" cols="30" rows="4" [(ngModel)]="descripcionEdu" required></textarea>
                 </div>
                 <br>
                 <button class="btn btn-primary">

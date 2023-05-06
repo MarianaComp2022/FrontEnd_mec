@@ -14,8 +14,7 @@ export class ImageService {
     const imgRef = ref(this.storage, 'imagen/' + name)
     uploadBytes(imgRef,file)
     .then(response =>{this.getImages()})
-    .catch(error => console.log(error)
-    )
+    .catch(error => console.log(error))
   }
 
   getImages(){

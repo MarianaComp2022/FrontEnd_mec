@@ -14,14 +14,10 @@
             <tbody>
               <tr *ngFor="let Proyecto of proy">
                 <div class="proyecto">
-                  <h2><img src={{Proyecto.img}} class="img-fluid" id="foto_proy"></h2>
-                  <!-- <img src="../../../assets/proyecto1.png" alt="Proyecto 1"> -->
+                  <h2><img src="../../../assets/proyecto1.png" alt="Proyecto 1" id="foto_proy"></h2>
                   <div class="overlay">
-                    <div class="iconos-contenedor">
-                      <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-list-check"></i>
-                      </a>
-                      <a href="https://www.freecodecamp.org/espanol/" target="_blank" rel="noopener noreferrer">
+                   <div class="iconos-contenedor">
+                      <a href={{Proyecto.proy_url}} target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-laptop"></i>
                       </a>
                     </div>
